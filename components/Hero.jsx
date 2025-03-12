@@ -14,14 +14,14 @@ const Hero = () => {
                             />
                         </div>
                         <h2 className="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">
-                            Buy YouTube Videos
+                            Fall 2024 Projects
                         </h2>
                         <p className="leading-relaxed text-base">
                             Williamsburg occupy sustainable snackwave gochujang. Pinterest
                             cornhole brunch, slow-carb neutra irony.
                         </p>
                         <button className="flex mx-auto mt-6 text-white bg-blue-500 border-0 py-2 px-5 focus:outline-none hover:bg-blue-600 rounded">
-                            Button
+                            View
                         </button>
                     </div>
                     <div className="sm:w-1/2 mb-10 px-4">
@@ -33,14 +33,14 @@ const Hero = () => {
                             />
                         </div>
                         <h2 className="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">
-                            The Catalyzer
+                            Spring 2025 Projects
                         </h2>
                         <p className="leading-relaxed text-base">
                             Williamsburg occupy sustainable snackwave gochujang. Pinterest
                             cornhole brunch, slow-carb neutra irony.
                         </p>
                         <button className="flex mx-auto mt-6 text-white bg-blue-500 border-0 py-2 px-5 focus:outline-none hover:bg-blue-600 rounded">
-                            Button
+                            View
                         </button>
                     </div>
                 </div>
