@@ -1,14 +1,17 @@
 
 import React from 'react'
+import Image from 'next/image'
 
 const ProjectCard = ({ title, description, tags, imageUrl, paperUrl, demoUrl, category, facultyAdvisor, achievement }) => {
     return (
         <div className="p-4 md:w-1/2 lg:w-1/3">
             <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                <img
+                <Image
                     className="lg:h-48 md:h-36 w-full object-cover object-center"
                     src={imageUrl}
                     alt={title}
+                    width={720}
+                    height={500}
                 />
                 <div className="p-6">
                     {/* Category */}
@@ -80,5 +83,5 @@ const ProjectCard = ({ title, description, tags, imageUrl, paperUrl, demoUrl, ca
     )
 }
 
-export default ProjectCard 
+export default ProjectCard
 
