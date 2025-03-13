@@ -1,6 +1,7 @@
+
 import React from 'react'
 
-const ProjectCard = ({ title, description, tags, imageUrl, paperUrl, demoUrl, category }) => {
+const ProjectCard = ({ title, description, tags, imageUrl, paperUrl, demoUrl, category, facultyAdvisor, achievement }) => {
     return (
         <div className="p-4 md:w-1/2 lg:w-1/3">
             <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
@@ -14,6 +15,16 @@ const ProjectCard = ({ title, description, tags, imageUrl, paperUrl, demoUrl, ca
                     <h2 className="tracking-widest text-xs title-font font-medium text-blue-500 mb-1">
                         {category}
                     </h2>
+
+                    {/* Faculty Advisor */}
+                    <p className="text-sm text-gray-500 mb-2">
+                        Faculty Advisor: {facultyAdvisor}
+                    </p>
+
+                    {/* Achievement */}
+                    <p className="text-sm text-green-600 font-medium mb-3">
+                        {achievement}
+                    </p>
 
                     {/* Title */}
                     <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
@@ -70,3 +81,4 @@ const ProjectCard = ({ title, description, tags, imageUrl, paperUrl, demoUrl, ca
 }
 
 export default ProjectCard 
+
