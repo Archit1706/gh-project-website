@@ -6,6 +6,22 @@ const Hero = () => {
     return (
         <section className="text-gray-600 body-font">
             <div className="container px-5 py-24 mx-auto">
+                <div className="text-center mb-16">
+                    <Image
+                        src="/images/uic_business.png"
+                        alt="UIC Business Logo"
+                        width={200}
+                        height={100}
+                        className="mx-auto mb-6 mix-blend-multiply"
+                    />
+                    <h1 className="text-4xl font-bold text-gray-900 mb-2">
+                        BizAI Innovation Lab
+                    </h1>
+                    <p className="text-xl text-gray-600">
+                        Faculty Advisor: Fatemeh Sarayloo
+                    </p>
+                </div>
+
                 <div className="flex flex-wrap -mx-4 -mb-10 text-center">
                     <div className="sm:w-1/2 mb-10 px-4">
                         <div className="rounded-lg h-64 overflow-hidden">

@@ -1,18 +1,33 @@
-
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const ProjectCard = ({ title, description, tags, imageUrl, paperUrl, demoUrl, category, facultyAdvisor, achievement }) => {
+    // Create a URL-friendly slug from the title
+    const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+
     return (
         <div className="p-4 md:w-1/2 lg:w-1/3">
             <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                <Image
-                    className="lg:h-48 md:h-36 w-full object-cover object-center"
-                    src={imageUrl}
-                    alt={title}
-                    width={720}
-                    height={500}
-                />
+                {achievement ? (
+                    <Link href={`/projects/${slug}`}>
+                        <Image
+                            className="lg:h-48 md:h-36 w-full object-cover object-center"
+                            src={imageUrl}
+                            alt={title}
+                            width={720}
+                            height={500}
+                        />
+                    </Link>
+                ) : (
+                    <Image
+                        className="lg:h-48 md:h-36 w-full object-cover object-center"
+                        src={imageUrl}
+                        alt={title}
+                        width={720}
+                        height={500}
+                    />
+                )}
                 <div className="p-6">
                     {/* Category */}
                     <h2 className="tracking-widest text-xs title-font font-medium text-blue-500 mb-1">
@@ -25,13 +40,21 @@ const ProjectCard = ({ title, description, tags, imageUrl, paperUrl, demoUrl, ca
                     </p>
 
                     {/* Achievement */}
-                    <p className="text-sm text-green-600 font-medium mb-3">
-                        {achievement}
-                    </p>
+                    {achievement && (
+                        <p className="text-sm text-green-600 font-medium mb-3">
+                            {achievement}
+                        </p>
+                    )}
 
                     {/* Title */}
                     <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                        {title}
+                        {achievement ? (
+                            <Link href={`/projects/${slug}`} className="hover:text-blue-600">
+                                {title}
+                            </Link>
+                        ) : (
+                            title
+                        )}
                     </h1>
 
                     {/* Tags */}
@@ -75,6 +98,17 @@ const ProjectCard = ({ title, description, tags, imageUrl, paperUrl, demoUrl, ca
                                     <path d="M5 12h14M12 5l7 7-7 7" />
                                 </svg>
                             </a>
+                        )}
+                        {achievement && (
+                            <Link
+                                href={`/projects/${slug}`}
+                                className="ml-auto text-blue-500 inline-flex items-center hover:text-blue-600"
+                            >
+                                Learn More
+                                <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </Link>
                         )}
                     </div>
                 </div>
