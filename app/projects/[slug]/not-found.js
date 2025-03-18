@@ -9,7 +9,7 @@ export default function NotFound() {
                         Project Not Found
                     </h2>
                     <p className="mt-2 text-sm text-gray-600">
-                        The project you're looking for doesn't exist or has been removed.
+                        The project you&apos;re looking for doesn&apos;t exist or has been removed.
                     </p>
                 </div>
                 <div>
